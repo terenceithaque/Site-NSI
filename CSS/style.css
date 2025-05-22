@@ -1,4 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Ancizar+Sans:ital,wght@0,100..1000;1,100..1000&display=swap");
+
+
 body {
 	background-color: lightgreen;
+
+}
+
+h1 {
+	font-size: 30px;
+	font-style : italic;
+	font-family: "Ancizar Sans";
+	text-align: center;
 
 }
