@@ -1,12 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Ancizar+Sans:ital,wght@0,100..1000;1,100..1000&display=swap");
 
-
+/** Corps du document **/
 body {
 	background-color: lightgreen;
 
 }
 
-h1 {
+
+/** Titres centrés**/
+.centered-title {
 	font-size: 30px;
 	font-style : italic;
 	font-family: "Ancizar Sans";
@@ -14,8 +16,26 @@ h1 {
 
 }
 
+/** Paragraphes **/
+p {
+	font-size: 20px;
+	font-style: oblique;
+	font-family: "Ancizar Sans";
+}
+
+
+/** Légendes d'images **/
+figcaption {
+	font-size: 15px;
+	font-style: oblique;
+	font-family: "Ancizar Sans";
+	color:blueviolet;
+}
+
+
+/** Images **/
 img {
 	border-radius: 20px;
-	
+
 	
 }
