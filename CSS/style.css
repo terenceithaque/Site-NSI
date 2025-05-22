@@ -95,5 +95,24 @@ img {
 
 	
 }
+
+/** Liens **/
+a {
+	font-size : 15px;
+	font-style: italic;
+	font-family: "Ancizar Sans";
+	color: violet;
+
+}
+
+
+/** Informations de pied de document **/
+footer {
+	background-color: white;
+	font-size: 15px;
+	font-style: italic;
+	font-family: "Ancizar Sans";
+}
+
 	
 }
