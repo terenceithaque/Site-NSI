@@ -41,6 +41,25 @@ img {
 }
 
 
+/** Liens **/
+a {
+	font-size : 20px;
+	font-style: italic;
+	font-family: "Ancizar Sans";
+	color: violet;
+
+}
+
+
+/** Informations de pied de document **/
+footer {
+	background-color: white;
+	font-size: 15px;
+	font-style: italic;
+	font-family: "Ancizar Sans";
+}
+
+
 /** Règles spéciales pour les fenêtres de navigateur inférieures à 800 pixels **/
 @media (max-width : 800px){
 
