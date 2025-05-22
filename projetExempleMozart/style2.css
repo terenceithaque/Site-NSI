@@ -1,0 +1,40 @@
+h1
+{
+	text-align: center;
+	font-style: bold;
+	background-color: #1B2372;
+	color: white;
+}
+h2
+{
+	text-align: left;
+	font-style: bold;
+	color: #1B4F72;
+}
+p
+{
+	font-family: Verdana;
+	font-size: 1.0em;
+	color: black;
+}
+li
+{
+	font-family: Verdana;
+	font-size: 1.0em;
+	color: #3E1B72;
+}
+a
+{
+	font-family: Verdana;
+	font-size: 1.0em;
+	font-style: italic;
+	color: blue;
+}
+.center
+{
+	display: block;
+  	margin-left: auto;
+  	margin-right: auto;
+  	width: 33%;
+  	border-radius: 10%;
+}
