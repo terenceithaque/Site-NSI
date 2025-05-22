@@ -39,3 +39,42 @@ img {
 
 	
 }
+
+
+/** Règles spéciales pour les fenêtres de navigateur inférieures à 800 pixels **/
+@media (max-width : 800px){
+
+	/** Titres centrés**/
+.centered-title {
+	font-size: 15px;
+	font-style : italic;
+	font-family: "Ancizar Sans";
+	text-align: center;
+
+}
+
+/** Paragraphes **/
+p {
+	font-size: 15px;
+	font-style: oblique;
+	font-family: "Ancizar Sans";
+}
+
+
+/** Légendes d'images **/
+figcaption {
+	font-size: 15px;
+	font-style: oblique;
+	font-family: "Ancizar Sans";
+	color:blueviolet;
+}
+
+
+/** Images **/
+img {
+	border-radius: 10px;
+
+	
+}
+	
+}
