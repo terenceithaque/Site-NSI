@@ -52,7 +52,10 @@ form {
 	border-radius: 10px;
 }
 
+/** Labels **/
+
 label {
+	user-select: none;
 	font-family: "Ancizar Sans";
 	display: inline-block;
 	padding: 10px;
