@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Ancizar+Sans:ital,wght@0,100..1000;1,100..1000&display=swap");
+
+/** Corps du document **/
+body {
+	background-color: yellow;
+
+}
+
+
+/** Titres centrés**/
+.centered-title {
+	font-size: 30px;
+	font-style : italic;
+	font-family: "Ancizar Sans";
+	text-align: center;
+
+}
+
+/** Paragraphes **/
+p {
+	font-size: 20px;
+	font-style: oblique;
+	font-family: "Ancizar Sans";
+}
+
+
+
+
+
+
+/** Images **/
+img {
+	border-radius: 20px;
+
+	
+}
+
+
+/** Liens **/
+a {
+	font-size : 20px;
+	font-style: italic;
+	font-family: "Ancizar Sans";
+	color: violet;
+
+}
+
+
+/** Formulaires **/
+form {
+	border-radius: 10px;
+}
+
+
+
+/** Règles spéciales pour les fenêtres de navigateur inférieures à 800 pixels **/
+@media (max-width : 800px){
+
+	/** Titres centrés**/
+.centered-title {
+	font-size: 15px;
+	font-style : italic;
+	font-family: "Ancizar Sans";
+	text-align: center;
+
+}
+
+/** Paragraphes **/
+p {
+	font-size: 15px;
+	font-style: oblique;
+	font-family: "Ancizar Sans";
+}
+
+
+
+/** Images **/
+img {
+	border-radius: 10px;
+
+	
+}
+
+/** Liens **/
+a {
+	font-size : 15px;
+	font-style: italic;
+	font-family: "Ancizar Sans";
+	color: violet;
+
+}
+
+	
+}
