@@ -41,8 +41,8 @@ figcaption {
 	width : 1200px;
 }
 
-/** iframes **/
-iframe {
+/** Vidéos **/
+video {
 	width: 560px;
 	height : 315px;
 }
@@ -105,8 +105,8 @@ figcaption {
 	color:blueviolet;
 }
 
-/** iframes **/
-iframe {
+/** Vidéos **/
+video {
 	width: 300px;
 	height : 100px;
 }
