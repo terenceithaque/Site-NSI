@@ -1,0 +1,1 @@
+// Script pour récupérer les réponses du quizz
