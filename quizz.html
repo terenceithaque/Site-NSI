@@ -80,21 +80,7 @@
         // Récupérer le bouton de soumission des réponses
         let submitButton = document.getElementById("submit");
         
-        // Obtenir les réponses sélectionnées
-        const genre = Array.from(elGenre.options).map(option => option.value);
-        console.log("genre :", genre)
-
-        const year = Array.from(elYear.options).map(option => option.value);
-        console.log("year :", year)
-
-        const city = Array.from(elCity.options).map(option => option.value);
-        console.log("city :", city)
-
-        const creation = Array.from(elCreation.options).map(option => option.value);
-        console.log("creation :", creation)
-
-        const film = Array.from(elFilm.options).map(option => option.value);
-        console.log("film :", film)
+       
 
         submitButton.addEventListener("click", submitAnswers)
 
@@ -102,6 +88,22 @@
         // Fonction pour soumettre les réponses
         function submitAnswers(){
             console.log("Soumission des réponses...");
+
+             // Obtenir les réponses sélectionnées
+            const genre = elGenre.value;
+            console.log("genre :", genre);
+
+            const year = elYear.value;
+            console.log("year :", year);
+
+            const city = elCity.value;
+            console.log("city :", city);
+
+            const creation = elCreation.value;
+            console.log("creation :", creation);
+
+            const film = elFilm.value;
+            console.log("film :", film);
         }
     </script>
 </html>
