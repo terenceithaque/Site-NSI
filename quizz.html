@@ -15,6 +15,7 @@
             <!--Question 1-->
             <label for="genre">Quel était le le genre du groupe 'The Coasters' ?</label>
                 <select name ="genre" id="genre">
+                <option value="default"></option>
                 <option value="rock_and_roll">Rock'n roll</option>
                 <option value="jazz">Jazz</option>
                 <option value="hip-hop">Hip-Hop</option>
@@ -25,6 +26,7 @@
                 <!--Question 2-->
                 <label for="year">En quelle année le groupe-a-til été créé ?</label>
                 <select name="year" id="year">
+                    <option value="default"></option>
                     <option name="1957">1957</option>
                     <option name="1959">1959</option>
                     <option name="1956">1956</option>
@@ -35,6 +37,7 @@
                 <!--Question 3-->
                 <label for="city">Dans quelle grande ville américaine se sont-ils produits ?</label>
                 <select name="city" id="city">
+                    <option value="default"></option>
                     <option name="san_francisco">San Francisco</option>
                     <option name="new_york">New York</option>
                     <option name="los_angeles">Los Angeles</option>
@@ -45,6 +48,7 @@
                 <!--Question 4-->
                 <label for="creation">"Sh boom life could be a dream" des "The Coasters" était </label>
                 <select name="creation" id="creation">
+                    <option value="default"></option>
                     <option name="originale">une création originale</option>
                     <option name="version">une nouvelle version d'une chanson existante</option>
                 </select>
@@ -54,6 +58,7 @@
                 <!--Question 5-->
                 <label for="film">Cette même chanson apparaît dans un film Pixar. Lequel ?</label>
                 <select name="film" id="film">
+                    <option value="default"></option>
                     <option name="monde_nemo">"Le monde de Nemo"</option>
                     <option name="planes">"Planes"</option>
                     <option name="cars">"Cars"</option>
@@ -80,17 +85,49 @@
 
         // Récupérer les éléments <select>
         let elGenre = document.getElementById("genre");
+        elGenre.addEventListener("change", enableSumbit);
         let elYear = document.getElementById("year");
+        elYear.addEventListener("change", enableSumbit);
         let elCity = document.getElementById("city");
+        elCity.addEventListener("change", enableSumbit);
         let elCreation = document.getElementById("creation");
+        elCreation.addEventListener("change", enableSumbit);
         let elFilm = document.getElementById("film");
+        elFilm.addEventListener("change", enableSumbit);
+
+        let selects = [elGenre, elYear, elCity, elCreation, elFilm];
         
         // Récupérer le bouton de soumission des réponses
         let submitButton = document.getElementById("submit");
+        submitButton.disabled = true;
         
        
 
-        submitButton.addEventListener("click", submitAnswers)
+        
+
+
+        function checkQuizzCompleted(){
+            for(select of selects){
+                if (select.value === "default"){
+                    return false;
+                }
+            }
+
+            return true;
+            
+        }
+
+        function enableSumbit(){
+            console.log("Quizz complété :", checkQuizzCompleted);
+            if (checkQuizzCompleted()){
+                submitButton.disabled = false;
+                submitButton.addEventListener("click", submitAnswers);
+
+            } else {
+                submitButton.disabled = true;
+            }
+            
+        }
 
 
         // Fonction pour soumettre les réponses
