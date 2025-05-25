@@ -66,4 +66,26 @@
 
         <button id="submit">Soumettre mes réponses</button>
     </body>
+
+    <script src="JS/reponses_quizz.js"></script>
+
+    <script>
+        // Récupérer les éléments <select>
+        let elGenre = document.getElementById("genre");
+        let elYear = document.getElementById("year");
+        let elCity = document.getElementById("city");
+        let elCreation = document.getElementById("creation");
+        let elFilm = document.getElementById("film");
+        
+        // Récupérer le bouton de soumission des réponses
+        let submitButton = document.getElementById("submit");
+
+        submitButton.addEventListener("click", submitAnswers)
+
+
+        // Fonction pour soumettre les réponses
+        function submitAnswers(){
+            console.log("Soumission des réponses...");
+        }
+    </script>
 </html>
