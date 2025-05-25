@@ -69,7 +69,7 @@
             
         </form>
 
-        <button id="submit">Soumettre mes réponses</button>
+        <button id="submit">Répondez à toutes les questions pour soumettre</button>
 
         <br>
         <a href="index.html">Revenir à la page d'accueil</a>
@@ -122,9 +122,11 @@
             if (checkQuizzCompleted()){
                 submitButton.disabled = false;
                 submitButton.addEventListener("click", submitAnswers);
+                submitButton.innerHTML = "Soumettre mes réponses";
 
             } else {
                 submitButton.disabled = true;
+                submitButton.innerHTML = "Répondez à toutes les questions pour soumettre"   
             }
             
         }
