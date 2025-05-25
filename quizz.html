@@ -104,6 +104,12 @@
 
             const film = elFilm.value;
             console.log("film :", film);
+
+            // Écrire les données dans le stockage de session
+            sessionStorage.setItem("answers", JSON.stringify([genre, year, city, creation, film]));
+            console.log(JSON.stringify([genre, year, city, creation, film]));
+
+            console.log("Réponses obtenues :", getAnswers());
         }
     </script>
 </html>
