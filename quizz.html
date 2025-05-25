@@ -70,6 +70,11 @@
     <script src="JS/reponses_quizz.js"></script>
 
     <script>
+
+        // Vider le stockage de session
+        sessionStorage.clear();
+
+        
         // Récupérer les éléments <select>
         let elGenre = document.getElementById("genre");
         let elYear = document.getElementById("year");
@@ -107,9 +112,12 @@
 
             // Écrire les données dans le stockage de session
             sessionStorage.setItem("answers", JSON.stringify([genre, year, city, creation, film]));
-            console.log(JSON.stringify([genre, year, city, creation, film]));
+            //console.log(JSON.stringify([genre, year, city, creation, film]));
 
             console.log("Réponses obtenues :", getAnswers());
+
+            // Charger la page des résultats
+            window.location.href = "resultats.html"
         }
     </script>
 </html>

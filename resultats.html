@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Résultats du quizz</title>
+    <link rel="stylesheet" href="CSS/style.css" />
+  </head>
+
+  <body>
+    <!--Paragraphe pour les résultats-->
+    <p id="paraResultats"></p>
+
+
+    <!--Lien pour réessayer le quizz-->
+    <a href="quizz.html">Réessayer le quizz</a>
+  </body>
+
+  <script src="JS/reponses_quizz.js"></script>
+
+  <script>
+    // Récupérer le paragraphe des résultats
+    let elParaResultats = document.getElementById("paraResultats");
+    // Texte par défaut du paragraphe
+    elParaResultats.innerHTML = "Pas de résultats.";
+    
+    // Si le joueur a entré les bonnes réponses
+    if (checkAnswers()){
+        elParaResultats.innerHTML = "Bravo, vous avez réussi(e) !"
+    }
+
+    // Ou s'il a mal répondu
+    else {
+        elParaResultats.innerHTML = "Il semble qu'une ou plusieurs réponses soient fausses. Réessayer le quizz si vous le souhaitez."
+    }
+  </script>
+
+ </html> 
