@@ -86,20 +86,49 @@
         // Récupérer les éléments <select>
         let elGenre = document.getElementById("genre");
         elGenre.addEventListener("change", enableSumbit);
+        elGenre.addEventListener("blur", colorSelect);
         let elYear = document.getElementById("year");
         elYear.addEventListener("change", enableSumbit);
+        elYear.addEventListener("blur", colorSelect);
         let elCity = document.getElementById("city");
         elCity.addEventListener("change", enableSumbit);
+        elCity.addEventListener("blur", colorSelect);
         let elCreation = document.getElementById("creation");
         elCreation.addEventListener("change", enableSumbit);
+        elCreation.addEventListener("blur", colorSelect);
         let elFilm = document.getElementById("film");
         elFilm.addEventListener("change", enableSumbit);
+        elFilm.addEventListener("blur", colorSelect);
 
         let selects = [elGenre, elYear, elCity, elCreation, elFilm];
         
         // Récupérer le bouton de soumission des réponses
         let submitButton = document.getElementById("submit");
         submitButton.disabled = true;
+
+
+        // Fonction pour vérifier si un élement <select> n'est pas vide
+        function checkSelect(select){
+            if (select.value === "default"){
+                console.log("Select vide !");
+                return false;
+            } else {
+                console.log("Select non vide !");
+                return true;
+            }
+
+
+        }
+
+        function colorSelect(event){
+            const select = event.target;
+            if (checkSelect(select)) {
+                select.style.color = "green";
+            } else {
+                select.style.color = "red";
+            }
+
+        }
         
        
 
