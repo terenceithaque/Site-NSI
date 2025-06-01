@@ -23,6 +23,12 @@ p {
 	font-family: "Ancizar Sans";
 }
 
+/** Paragrphe à afficher quand aucune réponde n'est sélectionée **/
+.emptyAnswer {
+	display: none;
+	color : red;
+
+}
 
 
 

@@ -13,6 +13,7 @@
         <form>
 
             <!--Question 1-->
+            <p class="emptyAnswer">Répondez à cette question !</p>
             <label for="genre">Quel était le le genre du groupe 'The Coasters' ?</label>
                 <select name ="genre" id="genre">
                 <option value="default"></option>
@@ -24,6 +25,7 @@
                 <br>
             
                 <!--Question 2-->
+                <p class="emptyAnswer">Répondez à cette question !</p>
                 <label for="year">En quelle année le groupe-a-til été créé ?</label>
                 <select name="year" id="year">
                     <option value="default"></option>
@@ -35,6 +37,7 @@
                 <br>
 
                 <!--Question 3-->
+                <p class="emptyAnswer">Répondez à cette question !</p>
                 <label for="city">Dans quelle grande ville américaine se sont-ils produits ?</label>
                 <select name="city" id="city">
                     <option value="default"></option>
@@ -46,6 +49,7 @@
                 <br>
 
                 <!--Question 4-->
+                <p class="emptyAnswer">Répondez à cette question !</p>
                 <label for="creation">"Sh boom life could be a dream" des "The Coasters" était </label>
                 <select name="creation" id="creation">
                     <option value="default"></option>
@@ -56,6 +60,7 @@
                 <br>
 
                 <!--Question 5-->
+                <p class="emptyAnswer">Répondez à cette question !</p>
                 <label for="film">Cette même chanson apparaît dans un film Pixar. Lequel ?</label>
                 <select name="film" id="film">
                     <option value="default"></option>
@@ -82,29 +87,52 @@
         // Vider le stockage de session
         sessionStorage.clear();
 
+        let emptyAnswerParagraphs = document.getElementsByClassName("emptyAnswer");
+
 
         // Récupérer les éléments <select>
         let elGenre = document.getElementById("genre");
         elGenre.addEventListener("change", enableSumbit);
-        elGenre.addEventListener("blur", colorSelect);
+        elGenre.addEventListener("blur", onAnswer);
         let elYear = document.getElementById("year");
         elYear.addEventListener("change", enableSumbit);
-        elYear.addEventListener("blur", colorSelect);
+        elYear.addEventListener("blur", onAnswer);
         let elCity = document.getElementById("city");
         elCity.addEventListener("change", enableSumbit);
-        elCity.addEventListener("blur", colorSelect);
+        elCity.addEventListener("blur", onAnswer);
         let elCreation = document.getElementById("creation");
         elCreation.addEventListener("change", enableSumbit);
-        elCreation.addEventListener("blur", colorSelect);
+        elCreation.addEventListener("blur", onAnswer);
         let elFilm = document.getElementById("film");
         elFilm.addEventListener("change", enableSumbit);
-        elFilm.addEventListener("blur", colorSelect);
+        elFilm.addEventListener("blur", onAnswer);
 
         let selects = [elGenre, elYear, elCity, elCreation, elFilm];
         
         // Récupérer le bouton de soumission des réponses
         let submitButton = document.getElementById("submit");
         submitButton.disabled = true;
+
+        function onAnswer(event){
+            updateEmptyAnswersP();
+            colorSelect(event);
+        }
+
+        function updateEmptyAnswersP(){
+            i = 0;
+            for (let select of selects){
+                if (checkSelect(select)){
+                    para = emptyAnswerParagraphs.item(i);
+                    para.style.display = "none";
+                    
+                } else {
+                    para = emptyAnswerParagraphs.item(i);
+                    para.style.display = "block";
+
+                }
+                i += 1;
+            }
+        }
 
 
         // Fonction pour vérifier si un élement <select> n'est pas vide
