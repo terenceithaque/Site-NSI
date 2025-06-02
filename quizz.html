@@ -92,19 +92,19 @@
 
         // Récupérer les éléments <select>
         let elGenre = document.getElementById("genre");
-        elGenre.addEventListener("change", enableSumbit);
+        elGenre.addEventListener("change", enableSubmit);
         elGenre.addEventListener("blur", onAnswer);
         let elYear = document.getElementById("year");
-        elYear.addEventListener("change", enableSumbit);
+        elYear.addEventListener("change", enableSubmit);
         elYear.addEventListener("blur", onAnswer);
         let elCity = document.getElementById("city");
-        elCity.addEventListener("change", enableSumbit);
+        elCity.addEventListener("change", enableSubmit);
         elCity.addEventListener("blur", onAnswer);
         let elCreation = document.getElementById("creation");
-        elCreation.addEventListener("change", enableSumbit);
+        elCreation.addEventListener("change", enableSubmit);
         elCreation.addEventListener("blur", onAnswer);
         let elFilm = document.getElementById("film");
-        elFilm.addEventListener("change", enableSumbit);
+        elFilm.addEventListener("change", enableSubmit);
         elFilm.addEventListener("blur", onAnswer);
 
         let selects = [elGenre, elYear, elCity, elCreation, elFilm];
@@ -176,7 +176,7 @@
             
         }
 
-        function enableSumbit(){
+        function enableSubmit(){
             console.log("Quizz complété :", checkQuizzCompleted);
             if (checkQuizzCompleted()){
                 submitButton.disabled = false;
