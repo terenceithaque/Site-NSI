@@ -31,6 +31,11 @@ p {
 }
 
 
+select {
+	border-radius: 10px;
+}
+
+
 
 
 
@@ -110,6 +115,11 @@ a {
 	font-family: "Ancizar Sans";
 	color: violet;
 
+}
+
+
+select {
+	border-radius: 10px;
 }
 
 	
